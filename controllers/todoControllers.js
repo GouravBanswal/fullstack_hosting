@@ -1,4 +1,5 @@
 const asyncHandler = require("express-async-handler")
+const Todo = require("../models/Todo")
 
 exports.addTodo = asyncHandler(async (req,res) => {
     await Todo.create(req.body)
